@@ -16,6 +16,7 @@
 body {
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-size: 13px;
+  background-color: var(--light-grayish-blue);
 }
 
 #first {
@@ -42,7 +43,6 @@ body {
 
 .people .people__info {
   display: grid;
-  background-color: green;
   grid-template-columns: 60px 105px;
   grid-template-rows: 30px 30px;
 }
@@ -78,4 +78,25 @@ body {
 .people .people__text {
   margin-top: 15px;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.people:nth-of-type(2) {
+  background-color: var(--grayish-blue);
+}
+
+.people:nth-of-type(3), .people:nth-of-type(5) {
+  background-color: var(--white);
+  color: var(--grayish-blue);
+}
+
+.people:nth-of-type(3) .people__notice, .people:nth-of-type(5) .people__notice {
+  color: rgba(151, 154, 161, 0.5);
+}
+
+.people:nth-of-type(3) .people__text, .people:nth-of-type(5) .people__text {
+  color: rgba(151, 154, 161, 0.7);
+}
+
+.people:nth-of-type(4) {
+  background-color: var(--blackish-blue);
 }
