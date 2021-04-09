@@ -20,6 +20,15 @@ body {
 
 #first {
   background-color: var(--moderate-violet);
+  overflow: hidden;
+}
+
+.people__headline::after {
+  content: url(/images/bg-pattern-quotation.svg);
+  position: absolute;
+  opacity: .5;
+  top: 2%;
+  right: 10%;
 }
 
 .people {
@@ -28,6 +37,7 @@ body {
   background-color: grey;
   margin: 20px;
   border-radius: 10px;
+  box-shadow: 0px 6px 25px black;
 }
 
 .people .people__info {
@@ -55,6 +65,7 @@ body {
 }
 
 .people .people__info .people__notice {
+  color: rgba(255, 255, 255, 0.5);
   padding-left: 10px;
 }
 
@@ -66,4 +77,5 @@ body {
 
 .people .people__text {
   margin-top: 15px;
+  color: rgba(255, 255, 255, 0.7);
 }
