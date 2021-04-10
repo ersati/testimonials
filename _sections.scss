@@ -1,28 +1,47 @@
+.wrapper{
+    @media (min-width:1030px){
+        display: grid;
+        grid-template-columns: 25vw 25vw 25vw 25vw;
+        grid-template-rows: 45vh 45vh;
+        grid-template-areas: 
+        "first first second fifth"
+        "third fourth fourth fifth"  ;
+    }
+}
+
 
 #first {
     background-color: var(--moderate-violet);
+    position:relative;
 overflow: hidden;
-}
+z-index: -1;
 .people__headline::after{
     
     content: url(/images/bg-pattern-quotation.svg);
     position: absolute;
     opacity: .5;
-    top: 2%;
+    top: 0%;
     right: 10%;
+    z-index: -1;
+}
+.people__headline{
+    // position: relative;
+    z-index: 1;
+}
 }
 
 .people {
-    padding: 30px;
+    padding: 20px;
     color:white;
     background-color: grey;
-    margin: 20px;
+    margin: 15px;
     border-radius: 10px;
     box-shadow: 0px 6px 25px black;
     .people__info {
         display: grid;
         grid-template-columns: 60px 105px;
         grid-template-rows: 30px 30px;
+
         .people__img{
             grid-column: 1 / span;
             grid-row: 1 / 3;
@@ -47,7 +66,6 @@ overflow: hidden;
     }
     .people__headline {
         font-size: 20px;
-        margin-top: 15px;
         line-height: 1.5;
     }
     .people__text{
@@ -57,12 +75,18 @@ overflow: hidden;
 }
 
 .people:nth-of-type(1){
+    @media (min-width:800px){
+        grid-area: first;
+    }
     .people__img{
         border: 2px solid hsl(263, 85%, 70%);
     }
 }
 .people:nth-of-type(2){
     background-color: var(--grayish-blue);
+    @media (min-width:800px){
+        grid-area: second;
+    }
 }
 
 .people:nth-of-type(3), .people:nth-of-type(5){
@@ -76,9 +100,24 @@ color: hsla(218, 5%, 61%, .7);;
     }
 }
 
+.people:nth-of-type(3){
+    @media (min-width:800px){
+        grid-area: third;
+    }
+}
+
+
 .people:nth-of-type(4){
     background-color: var(--blackish-blue);
+    @media (min-width:800px){
+        grid-area: fourth;
+    }
     .people__img{
         border:2px solid var(--moderate-violet);
+    }
+}
+.people:nth-of-type(5){
+    @media (min-width:800px){
+        grid-area: fifth;
     }
 }
