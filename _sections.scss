@@ -31,7 +31,7 @@ overflow: hidden;
             border-radius: 50%;
             width: 40px; 
             height: 40px;
-            border: 2px solid pink;
+            
         }
         .people__name{
             font-size: 13px;
@@ -56,6 +56,11 @@ overflow: hidden;
     }
 }
 
+.people:nth-of-type(1){
+    .people__img{
+        border: 2px solid hsl(263, 85%, 70%);
+    }
+}
 .people:nth-of-type(2){
     background-color: var(--grayish-blue);
 }
@@ -73,4 +78,7 @@ color: hsla(218, 5%, 61%, .7);;
 
 .people:nth-of-type(4){
     background-color: var(--blackish-blue);
+    .people__img{
+        border:2px solid var(--moderate-violet);
+    }
 }

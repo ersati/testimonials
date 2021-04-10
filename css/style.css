@@ -55,7 +55,6 @@ body {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  border: 2px solid pink;
 }
 
 .people .people__info .people__name {
@@ -80,6 +79,10 @@ body {
   color: rgba(255, 255, 255, 0.7);
 }
 
+.people:nth-of-type(1) .people__img {
+  border: 2px solid #a371f4;
+}
+
 .people:nth-of-type(2) {
   background-color: var(--grayish-blue);
 }
@@ -99,4 +102,8 @@ body {
 
 .people:nth-of-type(4) {
   background-color: var(--blackish-blue);
+}
+
+.people:nth-of-type(4) .people__img {
+  border: 2px solid var(--moderate-violet);
 }
